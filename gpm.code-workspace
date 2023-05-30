@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "gpm [ROOT]"
+		},
+	],
+	"settings": {
+		"gopls": {
+			"build.directoryFilters": [
+				"-../../",
+				"+gpm",
+			]
+		},
+	},
+}
+
