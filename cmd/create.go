@@ -99,6 +99,7 @@ to quickly create a Cobra application.`,
 			log.Fatal(err)
 		}
 		defer cfgFile.Close()
+		cfgFile.WriteString("echo 'Thank you for using gpm, you're environment is almost ready..'")
 		cfgFile.WriteString("export GOPATH=/develop/go\n")
 		cfgFile.WriteString("export PATH=$PATH:$GOPATH/bin\n")
 		cfgFile.WriteString(fmt.Sprintf("export PROJECT_NAME=%s\n", dirName))
@@ -109,10 +110,14 @@ to quickly create a Cobra application.`,
 		cfgFile.WriteString("export GH_USER_EMAIL=yaquino@google.com\n")
 		cfgFile.WriteString("export GH_PA_TOKEN=MY_PAT\n")
 		cfgFile.WriteString("export GH_REPO_URL=https://$GH_PA_TOKEN@github.com/$GH_USER_NAME/$PROJECT_NAME.git\n")
+		cfgFile.WriteString("export GCP_PROJECT_ID=holy-diver-297719\n")
 		cfgFile.WriteString("export GCP_AR_FOLDER=containers\n")
 		cfgFile.WriteString("export GCP_REGION=us-central1\n")
-		cfgFile.WriteString("export GCP_PROJECT_ID=holy-diver-297719\n")
+		cfgFile.WriteString("echo 'Replace `gpm scripts run` with `gpx` (an alias)'\n")
+		cfgFile.WriteString("alias gpx=\"gpm scripts run\"\n")
 		cfgFile.WriteString("deactivate () {\n\tPS1=$INIT_PS1\n\texport PS1\n\tunset -f deactivate\n}\n")
+		cfgFile.WriteString("echo 'Return to your regular environment with 'deactivate'")
+
 	},
 }
 

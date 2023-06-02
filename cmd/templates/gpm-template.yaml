@@ -1,0 +1,11 @@
+personal:
+  name: Yvan J. Aquino
+github:
+  username: YvanJAquino
+  email: yaquino@google.com
+  token: <EXCLUDED>
+gcp:
+  project_id: holy-diver-297719
+  region: us-central1
+  artifact_registry_repo: containers
+
